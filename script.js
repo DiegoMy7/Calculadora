@@ -4,7 +4,6 @@ function agregar(valor) {
     let partes = display.value.split(/[\+\-\*\/]/);
     let ultimoNumero = partes[partes.length - 1].trim();
 
-    // Evita múltiples puntos en el mismo número
     if (valor === "." && ultimoNumero.includes(".")) {
         return;
     }
@@ -16,14 +15,13 @@ function operacion(op) {
     let valorActual = display.value.trim();
     let ultimoCaracter = valorActual.slice(-1);
 
-    // Reemplazar operador si ya hay uno
     if (/[+\-*/]$/.test(ultimoCaracter)) {
         display.value = valorActual.slice(0, -1) + (op === "×" ? "*" : op === "÷" ? "/" : op);
         return;
     }
 
     if (valorActual === "") {
-        return; // Evita operadores al inicio
+        return; 
     }
 
     display.value += " " + (op === "×" ? "*" : op === "÷" ? "/" : op) + " ";
@@ -33,7 +31,7 @@ function calcular() {
     let expresion = display.value.trim();
 
     if (expresion === "" || /[+\-*/]$/.test(expresion)) {
-        return; // Evita cálculos inválidos
+        return; 
     }
 
     try {
