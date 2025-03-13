@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculator {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 45px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: 380px;  
+    height: 600px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#display {
+    width: 100%;
+    height: 100px;
+    background: black;
+    color: white;
+    font-size: 3rem;
+    text-align: right;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: #444;
+}
+
+.zero {
+    grid-column: span 2;
+    width: 150px;
+    border-radius: 50px;
+}
+
+.operator {
+    background: #ff9500;
+    color: white;
+}
+
+.operator:hover {
+    background: #e08900;
+}
+
+.equal {
+    background: #ff9500;
+}
+
+.equal:hover {
+    background: #e08900;
+}
+
+.clear {
+    background: #a5a5a5;
+    color: black;
+}
+
+.clear:hover {
+    background: #8e8e8e;
+}
+
+.delete {
+    background: #a5a5a5;
+    color: black;
+}
+
+.delete:hover {
+    background: #8e8e8e;
+}
+
